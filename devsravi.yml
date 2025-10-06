@@ -1,0 +1,90 @@
+vesrsin: 1.0 #this is not YAML version this is config version
+
+
+# String Datatypes
+name: "Ravi" # Variuables
+
+
+person: |
+  FistName: Ravi
+  lastName: Kumar
+
+person_again: >
+  FistName: Ravi
+  lastName: Kumar
+
+
+# Int Datatypes
+
+age: 27
+formula_sintific: 3.5e+2
+Hexa_decimal: 0xFF22FF
+
+#bool
+is_male: true, yes, no
+
+#null
+good_man: null
+great_man: ~
+
+#datetime
+Today: 2025-10-06
+ToDaydateTime: 2025-10-06 21:36:00
+
+
+#list
+Tea:
+  - Green Tea
+  - Masala Tea
+  - true
+  - false
+
+# Tea: [Green Tea, Masala tea]
+
+
+# Nested list
+tea_categories:
+  - name: Traditional
+    varities:
+      - masala tea
+
+
+# dictionary
+
+
+
+
+
+
+# Anchor or Alias
+
+default_tea: &default_base
+  tea: Milk_tea
+  water: 100ml
+
+morning_tea:
+  <<: *default_base
+  milk: 100ml
+
+evening_tea:
+  <<: *default_base
+  milk: 100ml
+
+# Explicit data type
+
+postal_code: !!int 'INDIA'
+
+country: !!str 123345
+
+
+# set 
+unique_tea: !!set
+  ? Green
+  ? Black
+  ? Milk
+
+
+
+
+
+
